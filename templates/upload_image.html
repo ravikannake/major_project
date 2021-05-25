@@ -1,0 +1,109 @@
+
+{% block title %}{% endblock %}
+
+{% block main %}
+
+<style >
+
+  body {
+  background-image: url("static/images/img2.jpg");
+    background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+  .container{
+  width: 100%;
+  text-align: center;
+  
+}
+
+  .custom-file{
+    width:20%;
+    text-align: center;
+    border-style: solid;
+    display: inline-block;
+    border-color: white;
+    border-radius: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 250px;
+    background-color: #008CBA;
+
+  }
+
+  .btn{
+    width: 5%;
+    text-align: center;
+    border-style: solid;
+
+  }
+
+  .button {
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+</style>
+
+
+<body>
+  
+  <div class="container">
+  <div class="row">
+    <div class="col">
+
+      <h1 style="font-family: monaco,Consolas,Lucida Console,monospace">Vehicle Number Plate Detection and Recognition</h1>
+      <hr>
+
+      <form action="/upload-image" method="POST" enctype="multipart/form-data">
+
+        <div class="form-group">
+          
+          <div class="custom-file">
+
+            <input type="file" class="custom-file-input" name="image" id="image">
+            <!-- <label class="custom-file-label" for="image">Select image...</label> -->
+          </div>
+        </div>
+
+        <!-- <button type="submit" class="btn btn-primary" style="margin-top: 30px">Upload</button> -->
+        <a style="text-decoration:none" href= upload-image> <button class="button button1">Upload</button> </a>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+
+{% endblock %}

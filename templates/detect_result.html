@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/*img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}*/
+
+.img-container-block {
+  text-align: center;
+  margin-bottom: 50px;
+  border-color: black;
+}
+
+
+
+h2{
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+h1{
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+  body {
+  background-image: url("static/images/cool-background.png");
+    background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  margin:25px;
+}
+
+/*img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}*/
+
+/*figure {
+	display: block;
+	width: 50%
+  border: 1px #cccccc solid;
+  padding: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+figcaption {
+  background-color: black;
+  color: white;
+  font-style: bold;
+  padding: 2px;
+  text-align: center;
+}*/
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-bottom: 50%;
+
+
+}
+
+.button1 {
+  background-color: #008CBA; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button1:hover {
+  background-color: black;
+  color: black;
+}
+
+div.polaroid {
+  width: 50%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 330px;
+
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+  display: block;
+}
+
+#license_number{
+  background-color: white;
+  width: 20%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+  margin-left: 500px;
+  border-style: solid;
+  border-color: #008CBA;
+
+}
+
+
+</style>
+</head>
+<body >
+
+<h1>Detection Result</h1>
+
+<!-- <div class="img-container-block">
+  <img src="static/uploads/{{orignal_img}}" alt="Orginal image" style="width:50%;">
+  <h2> Orignal Image</h2>
+</div>
+
+<div class="img-container-block">
+  <img src="static/uploads/{{detected_img}}" alt="Detected plate image" style="width:50%;">
+  <h2>Number Plate Detected Image</h2>
+</div>
+
+<div class="img-container-block">
+  <img src="static/uploads/{{ crop_img }}" alt="Cropped image" style="width:50%;">
+  <h2>Cropped Image</h2>
+</div> -->
+
+
+<!-- <figure>
+  <img src="static/uploads/{{orignal_img}}" alt="Orginal image" style="width:50%;">
+  <figcaption>Original Image</figcaption>
+</figure>
+
+<figure>
+  <img src="static/uploads/{{detected_img}}" alt="Detected plate image" style="width:50%;">
+  <figcaption>License Plate Detected Image</figcaption>
+</figure>
+
+<figure>
+  <img src="static/uploads/{{ crop_img }}" alt="Cropped image" style="width:50%;">
+  <figcaption>Cropped License Plate Image</figcaption>
+</figure> -->
+
+
+<div class="polaroid">
+  <img src="static/uploads/{{orignal_img}}" alt="Orginal image" style="width:100%;">
+  <div class="container">
+  <p>Original Image</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="static/uploads/{{detected_img}}" alt="Orginal image" style="width:100%;">
+  <div class="container">
+  <p>Number Plate Detected Image</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="static/uploads/{{ crop_img }}" alt="Orginal image" style="width:100%;">
+  <div class="container">
+  <p>Cropped License Plate Image</p>
+  </div>
+</div>
+
+
+
+<h4 id="license_number">License Plate Number:  {{plate_num}}</h4>
+
+<a style="text-decoration:none" href= details> <button class="button button1" style="color: white">Find Vehicle Owner Details</button> </a>
+
+</body>
+</html>
